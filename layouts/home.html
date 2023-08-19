@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Vault Collections - Explore Exquisite Car Collections</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=McLaren&display=swap');
+
+        :root{
+            --heading-size: 4.4vw;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Mclaren';
+        }
+
+        html{
+            scroll-behavior: smooth;
+            scroll-padding-top: 10vw;
+        }
+
+        body {
+            background: #1E2126;
+        }
+
+        header img{
+            width: 100%;
+        }
+
+        header nav ul li a {
+            color: #E3BC07;
+            font-size: 1.2vw;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-decoration: none;
+        }
+
+        nav {
+            background-color: black;
+        }
+
+        nav ul {
+            position: absolute;
+            display: flex;
+            /* left: 4.44%;
+            top: 2.34%; */
+            left: 1vw;
+            top: 2vw;
+        }
+
+        nav ul li {
+            list-style-type: none;
+            padding: 0 15%;
+        }
+
+
+        header h1 {
+            position: absolute;
+            font-size: 3.2vw;
+            font-weight: 400;
+            line-height: normal;
+            width: 73.819%;
+            height: 17.38%;
+            color: #E3BC07;
+            /* top: 17.28%;
+            left: 13.05%; */
+            top: 10vw;
+            left: 16vw;
+        }
+
+        header h1 span {
+            background-color: rgba(5, 17, 55, 0.51);
+        }
+
+        .about{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5vw;
+            margin-left: 7.361%;
+            margin-right: 6.25%;
+        }
+
+        .about h1{
+            margin-right: 4.16%;
+            font-size: var(--heading-size);
+            color: #1E1EE3;
+        }
+        
+        
+        .about p{
+            color: #E3BC07;
+            width: 70%;
+            font-size: 1.5vw;
+            text-align: justify;
+        }
+        
+        .carBrands{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5vw;
+        }
+
+        .carBrands h1{
+            font-size: var(--heading-size);
+            margin-bottom: 2.5vw;
+            color: #1E1EE3;
+        }
+
+        .cars{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .card{
+            position: relative;
+            margin: 2.2vw 0;
+            width: 42.63%;
+            height: 34.08%;
+        }
+
+        .card img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .card h2{
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            background-color: rgba(75, 75, 75, 0.76);
+            display: flex;
+            color: white;
+            font-size: 3.8vw;
+            font-weight: 400;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            opacity: 0;
+            transition: 0.6s;
+        }
+
+        .card h2:hover{
+            cursor: pointer;
+            opacity: 1;
+            transition: 0.6s;
+        }
+
+        footer h3{
+            color: #1E1EE3;
+            font-size: 1vw;
+            font-weight: 400;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="assets/bg.jpg" alt="">
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#carBrands">Cars</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+
+        <h1>Welcome to Car Vault Collections - <span>Your Gateway to Automotive Excellence!</span></h1>
+    </header>
+
+
+    <section class="about" id="about">
+        <h1>About Us</h1>
+        <p>Welcome to Car Vault Collection - Your Ultimate Destination for Automotive Excellence! At Car Vault
+            Collection, we are passionate about cars. Our collection is a tribute to the artistry, innovation, and
+            engineering prowess that have shaped the automotive world. Whether you're an avid car enthusiast, a history
+            buff, or simply someone who appreciates the beauty of fine automobiles, you've come to the right place. Step
+            into a world where classic meets contemporary, where elegance meets performance. Our collection boasts an
+            exquisite array of vehicles that range from vintage classics to modern marvels. Each car in our collection
+            has been carefully selected for its historical significance, exceptional design, and remarkable performance.
+            From iconic muscle cars that roared through the golden age of automobiles to sleek and eco-friendly electric
+            vehicles shaping the future, our collection is a journey through time and innovation.</p>
+    </section>
+
+    <section class="carBrands" id="carBrands">
+        <h1>Car Brands</h1>
+        <div class="cars">
+            <div class="card">
+                <img src="assets/mazda.png" alt="">
+                <h2>Mazda</h2>
+            </div>
+            <div class="card">
+                <img src="assets/honda.png" alt="">
+                <h2>Honda</h2>
+            </div>
+            <div class="card">
+                <img src="assets/ford.png" alt="">
+                <h2>Ford</h2>
+            </div>
+            <div class="card">
+                <img src="assets/toyota.png" alt="">
+                <h2>Toyota</h2>
+            </div>
+            <div class="card">
+                <img src="assets/bmw.png" alt="">
+                <h2>BMW</h2>
+            </div>
+            <div class="card">
+                <img src="assets/nissan.png" alt="">
+                <h2>Nissan</h2>
+            </div>
+            <div class="card">
+                <img src="assets/chevrolet.png" alt="">
+                <h2>Chevrolet</h2>
+            </div>
+            <div class="card">
+                <img src="assets/audi.png" alt="">
+                <h2>Audi</h2>
+            </div>
+            <div class="card">
+                <img src="assets/dodge.png" alt="">
+                <h2>Dodge</h2>
+            </div>
+            <div class="card">
+                <img src="assets/porche.png" alt="">
+                <h2>Porche</h2>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <h3>Developed by - Akshar Saxena</h3>
+    </footer>
+
+    <script>
+        const cars = document.querySelectorAll(".card")
+        var car;
+        cars.forEach(element => {
+            element.addEventListener('click', ()=>{
+                car = element.querySelector('h2').innerHTML;
+                localStorage.setItem("car", car)
+                window.location.href = `http://localhost:3000/cars`
+            })
+        });
+    </script>
+</body>
+
+</html>

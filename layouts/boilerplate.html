@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1>helloworld</h1>
+    <p></p>
+    <script src="info.js"></script>
+    <script>
+        const heading = document.querySelector('h1')
+        const car = localStorage.getItem("car")
+        const p = document.querySelector('p')
+        heading.textContent = car
+        data.forEach(element => {
+            if(element.carName === `${car}`){
+                p.innerHTML = element.desc
+            }
+        });
+    </script>
+</body>
+</html>
