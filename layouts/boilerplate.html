@@ -1,24 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=McLaren&display=swap');
+
+        body {
+            background: #1E2126;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Mclaren';
+        }
+
+        nav ul li a {
+            color: #E3BC07;
+            font-size: 1.2vw;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-decoration: none;
+        }
+
+        nav ul {
+            position: absolute;
+            display: flex;
+            /* left: 4.44%;
+            top: 2.34%; */
+            left: 1vw;
+            top: 2vw;
+        }
+
+        nav ul li {
+            list-style-type: none;
+            padding: 0 15%;
+        }
+
+        .logo {
+            margin: 15% 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo img {
+            position: absolute;
+            width: 15%;
+            animation: logo_animation 5s infinite;
+            /* transition: 3s; */
+        }
+
+        .content {
+            width: 75%;
+            margin: auto;
+            text-align: justify;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: #967B02;
+        }
+
+        h1 {
+            font-size: 2.5vw;
+        }
+
+        h2 {
+            font-size: 1.9vw;
+        }
+
+        h3 {
+            font-size: 1.5vw;
+        }
+
+        h4 {
+            font-size: 1.35vw;
+        }
+
+        span {
+            color: #E3BC07;
+        }
+
+        footer h3 {
+            color: #1E1EE3;
+            font-size: 1vw;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        @keyframes logo_animation {
+            0% {
+                filter: drop-shadow(0 20px 25px #E3BC07) drop-shadow(-20px 0 25px blue);
+
+            }
+
+            25% {
+                filter: drop-shadow(-20px 0 25px #E3BC07) drop-shadow(0 -20px 25px blue);
+
+            }
+
+            50% {
+                filter: drop-shadow(0 -20px 25px #E3BC07) drop-shadow(20px 0 25px blue);
+            }
+
+            75% {
+                filter: drop-shadow(20px 0 25px #E3BC07) drop-shadow(0 20px 25px blue);
+            }
+
+            100% {
+                filter: drop-shadow(0 20px 25px #E3BC07) drop-shadow(-20px 0 25px blue);
+
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>helloworld</h1>
-    <p></p>
+    <nav>
+        <ul>
+            <li><a href="https://carvaultcollections.onrender.com/#about">About</a></li>
+            <li><a href="https://carvaultcollections.onrender.com/#carBrands">Cars</a></li>
+            <li><a href="https://carvaultcollections.onrender.com/">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="logo">
+        <img src="" alt="" id="carLogo">
+    </div>
+    <div class="content">
+        <h1>Company Name : <span id="cName"></span></h1>
+        <h2>Estd : <span id="estd"></span></h2>
+        <h3>Country : <span id="ctr"></span></h3>
+        <h4>Owner : <span id="owner"></span></h4>
+        <h4>Company Value : <span id="value"></span></h4>
+        <h4>Description : <span id="desc"></span></h4>
+    </div>
+    <footer>
+        <h3>Developed by - Akshar Saxena</h3>
+    </footer>
     <script src="info.js"></script>
     <script>
-        const heading = document.querySelector('h1')
+        const head = document.querySelector('#cName')
+        const estd = document.querySelector('#estd')
+        const country = document.querySelector('#ctr')
+        const owner = document.querySelector('#owner')
+        const value = document.querySelector('#value')
+        const p = document.querySelector("#desc")
         const car = localStorage.getItem("car")
-        const p = document.querySelector('p')
-        heading.textContent = car
+        const logo = document.querySelector("#carLogo")
+        const title = document.querySelector("title")
+        title.textContent = `${car} Cars || Car Vault Collections`
+        if (car != "Mazda") {
+            logo.style.width = "25%"
+        }
+        logo.src = `assets/${car}_logo.png`
         data.forEach(element => {
-            if(element.carName === `${car}`){
+            if (element.carName === `${car}`) {
                 p.innerHTML = element.desc
+                head.innerHTML = element.carName
+                estd.innerHTML = element.estd
+                country.innerHTML = element.ctr
+                owner.innerHTML = element.owner
+                value.innerHTML = element.value
             }
         });
     </script>
 </body>
+
 </html>
