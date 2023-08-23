@@ -159,7 +159,7 @@
         if (car != "Mazda") {
             logo.style.width = "25%"
         }
-        logo.src = `assets/honda_logo.png`
+        logo.src = `assets/${car.toLowerCase()}_logo.png`
         data.forEach(element => {
             if (element.carName === `${car}`) {
                 p.innerHTML = element.desc
