@@ -88,11 +88,43 @@
             color: #E3BC07;
         }
 
-        footer h3 {
-            color: #1E1EE3;
-            font-size: 1vw;
-            font-weight: 400;
-            text-align: center;
+        @media only screen and (max-width: 400px) {
+            nav ul {
+                left: 25vw;
+            }
+
+            nav ul li a {
+                font-size: 2.6vw;
+            }
+
+            .logo {
+                margin-top: 40vw;
+            }
+
+            .logo img {
+                width: 25%;
+            }
+
+            .content {
+                margin-top: 35vw;
+            }
+
+            h1 {
+                font-size: 5vw;
+            }
+
+            h2 {
+                font-size: 4vw;
+            }
+
+            h3 {
+                font-size: 3.1vw;
+            }
+
+            h4 {
+                font-size: 2.9vw;
+            }
+
         }
 
         @keyframes logo_animation {
@@ -127,7 +159,7 @@
         <ul>
             <li><a href="https://carvaultcollections.onrender.com/#about">About</a></li>
             <li><a href="https://carvaultcollections.onrender.com/#carBrands">Cars</a></li>
-            <li><a href="https://carvaultcollections.onrender.com/">Contact</a></li>
+            <li><a href="https://carvaultcollections.onrender.com/#contact">Contact</a></li>
         </ul>
     </nav>
     <div class="logo">
@@ -141,9 +173,6 @@
         <h4>Company Value : <span id="value"></span></h4>
         <h4>Description : <span id="desc"></span></h4>
     </div>
-    <footer>
-        <h3>Developed by - Akshar Saxena</h3>
-    </footer>
     <script src="info.js"></script>
     <script>
         const head = document.querySelector('#cName')
@@ -157,7 +186,7 @@
         const title = document.querySelector("title")
         title.textContent = `${car} Cars || Car Vault Collections`
         if (car != "Mazda") {
-            logo.style.width = "25%"
+            logo.style.width = "27%"
         }
         logo.src = `assets/${car.toLowerCase()}_logo.png`
         data.forEach(element => {
